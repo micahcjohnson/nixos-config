@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.homeModules.helix =
-    { pkgs, pkgs-unstable, ... }:
+    { pkgs, ... }:
     let
       settings = {
         editor = {
@@ -25,7 +25,7 @@
       };
 
       languages = {
-        language-server = with pkgs-unstable; {
+        language-server = with pkgs; {
           typescript-language-server = {
             command = "${nodePackages.typescript-language-server}/bin/typescript-language-server";
             args = [ "--stdio" ];

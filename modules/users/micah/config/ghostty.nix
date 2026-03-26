@@ -1,11 +1,11 @@
 { ... }:
 {
   flake.homeModules.ghostty =
-    { pkgs-unstable, ... }:
+    { pkgs, ... }:
     {
       programs.ghostty = {
         enable = true;
-        package = pkgs-unstable.ghostty;
+        package = pkgs.ghostty;
         enableBashIntegration = true;
 
         settings = {

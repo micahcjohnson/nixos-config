@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.homeModules.vcs =
-    { pkgs-unstable, ... }:
+    { pkgs, ... }:
     let
       user = {
         name = "Micah Johnson";
@@ -18,7 +18,7 @@
 
       programs.jujutsu = {
         enable = true;
-        package = pkgs-unstable.jujutsu;
+        package = pkgs.jujutsu;
         settings = {
           inherit user;
           ui.default-command = "log";

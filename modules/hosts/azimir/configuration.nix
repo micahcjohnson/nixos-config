@@ -9,6 +9,7 @@
         svc-vaultwarden
         twk-nuphy-keyboard
         cmp-clt-sys
+        cmp-niri-sys
         cmp-stylix-sys
       ];
 

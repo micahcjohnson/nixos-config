@@ -4,17 +4,17 @@
     { pkgs, config, ... }:
     let
       system = pkgs.stdenv.hostPlatform.system;
-      pkgs-unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
     in
     {
-      _module.args.pkgs-unstable = pkgs-unstable;
-
       imports =
         with self.homeModules;
         [
           bash
+          ghostty
+          helix
           vcs
           cmp-clt-home
+          cmp-niri-home
           cmp-stylix-home
         ]
         ++ [
@@ -26,12 +26,14 @@
 
       home.packages =
         let
-          stable-pkgs = with pkgs; [
+          nixpkgs-pkgs = with pkgs; [
             # Desktop apps
             aseprite
             obsidian
             blender
             blockbench
+            zed-editor
+            godot
 
             # Terminal utilities
             btop
@@ -41,34 +43,26 @@
             zip
             unzip
             claude-code
+            opencode
 
             # adds some utilities used by MO2
             libsForQt5.qt5.qttools
             p7zip
             zenity
 
+            nil
+            nixd
+
             # Fonts
             noto-fonts
             nerd-fonts.fira-code
-          ];
-          unstable-pkgs = with pkgs-unstable; [
-            # Desktop apps
-            zed-editor
-            godot
-
-            # Terminal apps
-            opencode
-
-            # LSP-related binaries
-            nil
-            nixd
           ];
           custom-pkgs = with self.packages.${system}; [
             helium
             tableplus
           ];
         in
-        stable-pkgs ++ unstable-pkgs ++ custom-pkgs;
+        nixpkgs-pkgs ++ custom-pkgs;
 
       home.file.".fonts".source =
         let
