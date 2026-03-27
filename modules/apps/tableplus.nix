@@ -30,6 +30,8 @@
 
           extraInstallCommands = ''
             install -m 444 -D ${contents}/${pname}-appimage.desktop -t $out/share/applications
+            substituteInPlace $out/share/applications/${pname}-appimage.desktop \
+              --replace-warn 'Exec=${pname}' "Exec=$out/bin/${pname}"
             cp -r ${contents}/usr/share/icons $out/share
           '';
         };

@@ -22,7 +22,7 @@
           extraInstallCommands = ''
             install -m 444 -D ${contents}/${pname}.desktop -t $out/share/applications
             substituteInPlace $out/share/applications/${pname}.desktop \
-              --replace-warn 'Exec=AppRun' 'Exec=${pname}'
+              --replace-warn 'Exec=${pname}' "Exec=$out/bin/${pname}"
             cp -r ${contents}/usr/share/icons $out/share
           '';
         };

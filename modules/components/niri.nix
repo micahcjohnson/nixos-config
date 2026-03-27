@@ -29,6 +29,7 @@
         adwaita-icon-theme
         hicolor-icon-theme
         xdg-user-dirs
+        app2unit
       ];
 
       environment.sessionVariables.NIXOS_OZONE_WL = "1";
