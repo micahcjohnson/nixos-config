@@ -65,13 +65,22 @@
     };
 
   perSystem =
-    { pkgs, lib, ... }:
+    {
+      pkgs,
+      lib,
+      self',
+      ...
+    }:
     {
       packages.niri = inputs.wrapper-modules.wrappers.niri.wrap {
         inherit pkgs;
 
         settings = {
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+
+          spawn-at-startup = [
+            (lib.getExe self'.packages.noctalia)
+          ];
 
           input = {
             keyboard = {
@@ -162,14 +171,20 @@
             }
           ];
 
-          binds = {
-            "Mod+Return" = {
+          binds =
+          let
+            noctalia-ipc = "${lib.getExe self'.packages.noctalia} ipc call";
+          in
+          {
+            "Mod+T" = {
               _attrs = {
                 cooldown-ms = 500;
                 hotkey-overlay-title = "Open a Terminal: ghostty";
               };
               spawn-sh = "ghostty +new-window";
             };
+
+            "Mod+Space".spawn-sh = "${noctalia-ipc} launcher toggle";
 
             "Mod+Q".close-window = null;
 
@@ -205,10 +220,10 @@
             "Mod+F".maximize-column = null;
             "Mod+Shift+F".fullscreen-window = null;
 
-            "Mod+Minus".set-window-width = "-10%";
-            "Mod+Plus".set-window-width = "+10%";
+            "Mod+Minus".set-column-width = "-10%";
+            "Mod+Equal".set-column-width = "+10%";
             "Mod+Shift+Minus".set-window-height = "-10%";
-            "Mod+Shift+Plus".set-window-height = "+10%";
+            "Mod+Shift+Equal".set-window-height = "+10%";
 
             "Mod+V".toggle-window-floating = null;
             "Mod+Shift+V".switch-focus-between-floating-and-tiling = null;
