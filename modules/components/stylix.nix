@@ -17,6 +17,7 @@
         targets = {
           zed.enable = false;
           zen-browser.enable = false;
+          ghostty.enable = false;
         };
 
         cursor = {

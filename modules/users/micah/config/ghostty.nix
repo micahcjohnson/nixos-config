@@ -9,6 +9,9 @@
         enableBashIntegration = true;
 
         settings = {
+          theme = "noctalia";
+
+          font-family = "FiraCode Nerd Font";
           font-feature = [
             "ss01"
             "ss04"
@@ -20,6 +23,7 @@
             "cv30"
             "cv31"
           ];
+          font-size = 10;
 
           window-padding-balance = true;
           window-padding-color = "extend";
