@@ -18,6 +18,7 @@
           zed.enable = false;
           zen-browser.enable = false;
           ghostty.enable = false;
+          helix.enable = false;
         };
 
         cursor = {
