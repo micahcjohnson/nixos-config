@@ -49,6 +49,7 @@
         seahorse
         slurp
         wl-screenrec
+        gpu-screen-recorder
         noctalia-qs
         noctalia-shell
       ];
