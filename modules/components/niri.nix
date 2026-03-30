@@ -29,6 +29,7 @@
         adwaita-icon-theme
         hicolor-icon-theme
         xdg-user-dirs
+        xwayland-satellite
         app2unit
       ];
 
