@@ -28,7 +28,7 @@
       languages = {
         language-server = with pkgs; {
           typescript-language-server = {
-            command = "${nodePackages.typescript-language-server}/bin/typescript-language-server";
+            command = "${typescript-language-server}/bin/typescript-language-server";
             args = [ "--stdio" ];
           };
           tailwindcss-ls = {
@@ -36,10 +36,10 @@
             args = [ "--stdio" ];
           };
           # causing build failure 2026-02-12
-          # superhtml-lsp = {
-          #   command = "${superhtml}/bin/superhtml";
-          #   args = [ "lsp" ];
-          # };
+          superhtml-lsp = {
+            command = "${superhtml}/bin/superhtml";
+            args = [ "lsp" ];
+          };
           vscode-css-language-server = {
             command = "${vscode-css-languageserver}/bin/vscode-css-languageserver";
           };
