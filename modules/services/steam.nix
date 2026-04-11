@@ -13,6 +13,8 @@
 
       programs.gamemode.enable = true;
 
+      boot.kernelModules = [ "hid-playstation" ];
+
       hardware = {
         graphics = {
           enable = true;

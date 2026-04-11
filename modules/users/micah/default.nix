@@ -34,6 +34,7 @@
             blockbench
             zed-editor
             godot
+            cemu
 
             # Terminal utilities
             btop
