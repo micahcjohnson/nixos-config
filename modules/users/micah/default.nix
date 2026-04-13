@@ -34,7 +34,9 @@
             blockbench
             zed-editor
             godot
-            cemu
+
+            # build failing 4/13 :(
+            # cemu
 
             # Terminal utilities
             btop
