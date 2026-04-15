@@ -18,6 +18,7 @@
           cmp-stylix-home
         ]
         ++ [
+          inputs.nix-index-database.homeModules.default
           inputs.zen-browser.homeModules.beta
         ];
 
@@ -89,6 +90,7 @@
       home.sessionVariables.XCURSOR_PATH = "$HOME/.icons:$HOME/.local/share/icons:/usr/share/icons:/usr/share/pixmaps";
 
       programs.zen-browser.enable = true;
+      programs.nix-index-database.comma.enable = true;
 
       systemd.user.startServices = "sd-switch";
 
