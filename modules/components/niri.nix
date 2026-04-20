@@ -9,7 +9,10 @@
 
       security.polkit.enable = true;
       services.gnome.gnome-keyring.enable = true;
-      security.pam.services.ly.enableGnomeKeyring = true;
+      security.pam.services.ly = {
+        enableGnomeKeyring = true;
+        fprintAuth = false;
+      };
 
       xdg.portal = {
         enable = true;
