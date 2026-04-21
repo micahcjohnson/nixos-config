@@ -6,13 +6,13 @@
       packages.helium =
         let
           # https://github.com/imputnet/helium-linux/releases
-          version = "0.10.7.1";
+          version = "0.11.3.2";
 
           pname = "helium";
           src = pkgs.fetchurl {
             url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-x86_64.AppImage";
             # Listed with the release file.
-            hash = "sha256:faf9b15dc83c4e447f1808872a78eae1bd386c6b50cc4adf26439be0fe276549";
+            hash = "sha256:e607722a0d76655da1a5fd112fe7a82676b0b96fc9f0da1b886fb3100d083870";
           };
           contents = pkgs.appimageTools.extract { inherit pname version src; };
         in
