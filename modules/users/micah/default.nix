@@ -46,8 +46,6 @@
             bat
             zip
             unzip
-            claude-code
-            opencode
 
             # adds some utilities used by MO2
             libsForQt5.qt5.qttools
@@ -61,12 +59,17 @@
             noto-fonts
             nerd-fonts.fira-code
           ];
+          llm-agents-pkgs = with inputs.llm-agents.packages.${system}; [
+            claude-code
+            opencode
+            pi
+          ];
           custom-pkgs = with self.packages.${system}; [
             helium
             tableplus
           ];
         in
-        nixpkgs-pkgs ++ custom-pkgs;
+        nixpkgs-pkgs ++ llm-agents-pkgs ++ custom-pkgs;
 
       home.file.".fonts".source =
         let
