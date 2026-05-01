@@ -46,6 +46,7 @@
             bat
             zip
             unzip
+            pnpm
 
             # adds some utilities used by MO2
             libsForQt5.qt5.qttools

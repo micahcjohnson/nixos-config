@@ -29,5 +29,7 @@
         enableBashIntegration = true;
         options = [ "--cmd cd" ];
       };
+
+      programs.eza.enable = true;
     };
 }
