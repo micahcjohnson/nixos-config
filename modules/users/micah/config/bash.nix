@@ -11,6 +11,9 @@
 
         # add manually-installed duckdb to path
         export PATH="/home/micah/.duckdb/cli/latest":$PATH
+
+        # add ~/.pnpm-global/bin to path
+        export PATH="/home/micah/.pnpm-global/bin":$PATH
       '';
 
       programs.direnv = {
