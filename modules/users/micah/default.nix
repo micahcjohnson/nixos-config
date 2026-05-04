@@ -69,6 +69,7 @@
           custom-pkgs = with self.packages.${system}; [
             helium
             tableplus
+            usagi
           ];
         in
         nixpkgs-pkgs ++ llm-agents-pkgs ++ custom-pkgs;
