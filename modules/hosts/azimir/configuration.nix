@@ -7,7 +7,6 @@
         azimirHardware
         svc-steam
         svc-vaultwarden
-        twk-bluetooth
         twk-nuphy-keyboard
         cmp-clt-sys
         cmp-niri-sys
