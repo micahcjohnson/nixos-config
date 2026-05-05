@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.twk-bluetooth =
     { pkgs, ... }:
@@ -9,5 +9,11 @@
         ${pkgs.kmod}/bin/rmmod btusb || true
         ${pkgs.kmod}/bin/modprobe btusb
       '';
+
+      # Pin bluetoothd to bluez 5.84 — 5.86 (shipped in 2026-04-27 nixpkgs bump)
+      # appears to disable the controller more aggressively under load. Only the
+      # daemon is swapped; consumers like pipewire talk to it over dbus.
+      hardware.bluetooth.package =
+        inputs.nixpkgs-bluez.legacyPackages.${pkgs.stdenv.hostPlatform.system}.bluez;
     };
 }
