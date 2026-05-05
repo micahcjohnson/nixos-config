@@ -4,7 +4,6 @@
     { pkgs, ... }:
     let
       settings = {
-        theme = "noctalia";
         editor = {
           color-modes = true;
           idle-timeout = 100;

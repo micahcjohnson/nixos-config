@@ -9,8 +9,6 @@
         enableBashIntegration = true;
 
         settings = {
-          theme = "noctalia";
-
           font-family = "FiraCode Nerd Font";
           font-feature = [
             "ss01"

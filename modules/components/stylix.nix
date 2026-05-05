@@ -5,7 +5,7 @@
     {
       stylix = {
         enable = true;
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/vesper.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/irblack.yaml";
         polarity = "dark";
       };
     };
@@ -14,13 +14,6 @@
     { pkgs, ... }:
     {
       stylix = {
-        targets = {
-          zed.enable = false;
-          zen-browser.enable = false;
-          ghostty.enable = false;
-          helix.enable = false;
-        };
-
         cursor = {
           package = pkgs.bibata-cursors;
           name = "Bibata-Modern-Ice";

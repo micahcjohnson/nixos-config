@@ -5,7 +5,22 @@
     {
       programs.niri.enable = true;
 
-      services.displayManager.ly.enable = true;
+      services.displayManager.ly = {
+        enable = true;
+
+        settings = {
+          battery_id = "BAT1";
+          bigclock = "en";
+          bigclock_12hr = "true";
+
+          animation = "gameoflife";
+          gameoflife_entropy_interval = 10;
+          gameoflife_initial_density = 0.4;
+
+          shell = false;
+          xinitrc = null;
+        };
+      };
 
       security.polkit.enable = true;
       services.gnome.gnome-keyring.enable = true;
@@ -52,7 +67,9 @@
         playerctl
         seahorse
         slurp
-        wl-screenrec
+        swaybg
+        hyprlock
+        swaynotificationcenter
         gpu-screen-recorder
         noctalia-qs
         noctalia-shell
