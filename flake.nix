@@ -2,8 +2,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Pin for bluez 5.84 — see modules/tweaks/bluetooth.nix and memory project_bluetooth_mt7925.
-    nixpkgs-bluez.url = "github:nixos/nixpkgs/b12141ef619e0a9c1c84dc8c684040326f27cdcc";
+    # Pin for noctalia + quickshell built against Qt 6.10.2 — see modules/components/niri.nix
+    # and memory project_bluetooth_mt7925. Qt 6.11 (post 2026-04-27 bump) appears to make
+    # noctalia/Quickshell flaky under load, with downstream BT effects.
+    nixpkgs-noctalia.url = "github:nixos/nixpkgs/b12141ef619e0a9c1c84dc8c684040326f27cdcc";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";

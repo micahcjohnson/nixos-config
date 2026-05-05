@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.cmp-niri-sys =
     { pkgs, ... }:
@@ -43,8 +43,13 @@
 
   flake.homeModules.cmp-niri-home =
     { pkgs, ... }:
+    let
+      # Pin noctalia + quickshell to Qt 6.10.2 build (pre-2026-04-27 nixpkgs).
+      # See memory: project_bluetooth_mt7925.
+      pinned = inputs.nixpkgs-noctalia.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+    in
     {
-      home.packages = with pkgs; [
+      home.packages = (with pkgs; [
         bluetui
         font-awesome
         libnotify
@@ -54,8 +59,9 @@
         slurp
         wl-screenrec
         gpu-screen-recorder
-        noctalia-qs
-        noctalia-shell
+      ]) ++ [
+        pinned.noctalia-qs
+        pinned.noctalia-shell
       ];
 
       gtk = {
