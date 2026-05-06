@@ -84,6 +84,9 @@
         gtk4.theme = null;
       };
 
+      programs.fuzzel.enable = true;
+      programs.hyprlock.enable = true;
+      # services.hypridle.enable = true;
       services.polkit-gnome.enable = true;
     };
 }
