@@ -16,6 +16,7 @@
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
       boot.kernelPackages = pkgs.linuxPackages_latest;
+      boot.kernelModules = [ "uvcvideo" ];
 
       networking.hostName = "azimir";
       networking.networkmanager.enable = true;
