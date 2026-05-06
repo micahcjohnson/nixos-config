@@ -81,7 +81,7 @@
           package = pkgs.adwaita-icon-theme;
           name = "Adwaita";
         };
-        gtk4.theme.name = "noctalia";
+        gtk4.theme = null;
       };
 
       services.polkit-gnome.enable = true;

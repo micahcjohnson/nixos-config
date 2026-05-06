@@ -14,6 +14,11 @@
     { pkgs, ... }:
     {
       stylix = {
+        targets = {
+          zen-browser.enable = false;
+          zed.enable = false;
+        };
+        
         cursor = {
           package = pkgs.bibata-cursors;
           name = "Bibata-Modern-Ice";
