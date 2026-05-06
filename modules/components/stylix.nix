@@ -5,6 +5,7 @@
     {
       stylix = {
         enable = true;
+        # https://tinted-theming.github.io/tinted-gallery/#base16-irblack
         base16Scheme = "${pkgs.base16-schemes}/share/themes/irblack.yaml";
         polarity = "dark";
       };

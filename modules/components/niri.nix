@@ -84,7 +84,23 @@
         gtk4.theme = null;
       };
 
-      programs.fuzzel.enable = true;
+      programs.fuzzel = {
+        enable = true;
+        settings = {
+          main = {
+            terminal = "${pkgs.ghostty}/bin/ghostty -e";
+            launch-prefix = "${pkgs.app2unit}/bin/app2unit";
+
+            horizontal-pad = 10;
+            vertical-pad = 10;
+          };
+
+          border = {
+            width = 2;
+            radius = 0;
+          };
+        };
+      };
       programs.hyprlock.enable = true;
       # services.hypridle.enable = true;
       services.polkit-gnome.enable = true;
