@@ -70,6 +70,7 @@
         swaybg
         hyprlock
         swaynotificationcenter
+        ironbar
         gpu-screen-recorder
         noctalia-qs
         noctalia-shell
