@@ -103,7 +103,7 @@
           dates = "weekly";
           extraArgs = "--keep 5 --keep-since 3d";
         };
-        flake = "/home/micah/nixos-config-v2";
+        flake = "/home/micah/nixos-config";
       };
 
       programs.nix-ld.enable = true;
