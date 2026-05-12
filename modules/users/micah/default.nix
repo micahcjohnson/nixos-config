@@ -48,6 +48,7 @@
             unzip
             pnpm
             nodejs
+            just
 
             # adds some utilities used by MO2
             libsForQt5.qt5.qttools
