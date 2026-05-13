@@ -34,7 +34,6 @@
             command = "${tailwindcss-language-server}/bin/tailwindcss-language-server";
             args = [ "--stdio" ];
           };
-          # causing build failure 2026-02-12
           superhtml-lsp = {
             command = "${superhtml}/bin/superhtml";
             args = [ "lsp" ];
@@ -45,15 +44,8 @@
           vscode-json-language-server = {
             command = "${vscode-json-languageserver}/bin/vscode-json-languageserver";
           };
-          agent-lsp-dev = {
-            command = "${nodejs}/bin/node";
-            args = [
-              "/home/micah/CLT/misc/agent-lsp/out/server.js"
-              "--stdio"
-            ];
-            environment = {
-              PATH = "/etc/profiles/per-user/micah/bin";
-            };
+          lua-language-server = {
+            command = "${lua-language-server}/bin/lua-language-server";
           };
           claude-reviewer-lsp-dev = {
             command = "/home/micah/CLT/misc/claude-reviewer-lsp/out/claude-reviewer-lsp";
