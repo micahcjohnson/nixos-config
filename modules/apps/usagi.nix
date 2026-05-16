@@ -6,12 +6,12 @@
       packages.usagi =
         let
           # https://github.com/brettchalupa/usagi/releases
-          version = "0.7.2";
+          version = "0.8.0";
 
           pname = "usagi";
           src = pkgs.fetchurl {
             url = "https://github.com/brettchalupa/usagi/releases/download/v${version}/usagi-${version}-linux-x86_64.tar.gz";
-            hash = "sha256:fa07aa08cfb9cc864a425e78975b2a5cfdab7d4e4974e6834b925a904ada0c49";
+            hash = "sha256:981b2fc79e6b26488b3c8d1a9f02911f04713ec9ff39181cd48bfec02f1f9087";
           };
         in
         pkgs.stdenv.mkDerivation {
@@ -19,7 +19,10 @@
           sourceRoot = ".";
 
           nativeBuildInputs = [ pkgs.autoPatchelfHook ];
-          buildInputs = [ pkgs.stdenv.cc.cc.lib ];
+          buildInputs = [
+            pkgs.stdenv.cc.cc.lib
+            pkgs.zlib
+          ];
 
           runtimeDependencies = with pkgs; [
             alsa-lib
