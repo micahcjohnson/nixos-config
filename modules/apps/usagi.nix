@@ -6,12 +6,12 @@
       packages.usagi =
         let
           # https://github.com/brettchalupa/usagi/releases
-          version = "0.8.0";
+          version = "1.0.0";
 
           pname = "usagi";
           src = pkgs.fetchurl {
             url = "https://github.com/brettchalupa/usagi/releases/download/v${version}/usagi-${version}-linux-x86_64.tar.gz";
-            hash = "sha256:981b2fc79e6b26488b3c8d1a9f02911f04713ec9ff39181cd48bfec02f1f9087";
+            hash = "sha256:3976fa2de170110e43fb5c2c951d8fef6130325265cf61f8b505a8a6e69dbbca";
           };
         in
         pkgs.stdenv.mkDerivation {
