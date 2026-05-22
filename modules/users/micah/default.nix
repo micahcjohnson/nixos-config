@@ -61,6 +61,7 @@
             # Fonts
             noto-fonts
             nerd-fonts.fira-code
+            nerd-fonts.monaspace
           ];
           llm-agents-pkgs = with inputs.llm-agents.packages.${system}; [
             claude-code

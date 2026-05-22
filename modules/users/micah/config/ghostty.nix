@@ -9,17 +9,15 @@
         enableBashIntegration = true;
 
         settings = {
-          font-family = "FiraCode Nerd Font";
           font-feature = [
             "ss01"
+            "ss02"
             "ss04"
-            "ss06"
-            "ss08"
-            "cv06"
-            "cv13"
-            "cv29"
-            "cv30"
-            "cv31"
+            "ss07"
+            "ss09"
+            "ss10"
+            "liga"
+            "calt"
           ];
           font-size = 10;
 

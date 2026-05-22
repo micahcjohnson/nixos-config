@@ -28,8 +28,8 @@
 
         fonts = {
           monospace = {
-            package = pkgs.nerd-fonts.fira-code;
-            name = "FiraCode Nerd Font";
+            package = pkgs.nerd-fonts.monaspace;
+            name = "MonaspiceNe Nerd Font";
           };
           serif = {
             package = pkgs.noto-fonts;
