@@ -25,6 +25,7 @@
       home.packages = with pkgs; [
         autossh
         awscli2 # Intentionally not using the enable option so that it can manage its own config
+        ssm-session-manager-plugin
         eksctl
         kubernetes
         slack
