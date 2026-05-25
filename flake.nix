@@ -2,11 +2,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Pinned for azimir's kernel only: linuxPackages_latest at this rev is
-    # 7.0.5. Newer 7.0.x (7.0.8) has a btmtk/btusb regression that breaks
-    # MT7925 Bluetooth (WMT func ctrl -22). Bump once 7.0.x ships a fix.
-    nixpkgs-kernel.url = "github:nixos/nixpkgs/da5ad661ba4e5ef59ba743f0d112cbc30e474f32";
-
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 

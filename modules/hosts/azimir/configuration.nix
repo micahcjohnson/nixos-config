@@ -15,10 +15,7 @@
 
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
-      # Pinned to nixpkgs-kernel (rev da5ad66) = kernel 7.0.5. 7.0.8 has a
-      # btmtk/btusb regression that breaks MT7925 Bluetooth (WMT func ctrl
-      # -22). Rest of the system still tracks the main nixpkgs input.
-      boot.kernelPackages = inputs.nixpkgs-kernel.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages_latest;
+      boot.kernelPackages = pkgs.linuxPackages_latest;
       boot.kernelModules = [ "uvcvideo" ];
 
       networking.hostName = "azimir";
