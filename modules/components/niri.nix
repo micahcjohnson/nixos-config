@@ -16,6 +16,7 @@
           animation = "gameoflife";
           gameoflife_entropy_interval = 10;
           gameoflife_initial_density = 0.4;
+          gameoflife_fg = "0x00F0F0F0";
 
           shell = false;
           xinitrc = null;
