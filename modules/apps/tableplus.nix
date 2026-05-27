@@ -6,14 +6,14 @@
       packages.tableplus =
         let
           # Find this info at https://tableplus.com/blog/2020/01/changelogs-linux.html.
-          version = "1.5.5";
-          build-number = "300";
+          version = "1.6.0";
+          build-number = "302";
 
           pname = "tableplus";
           src = pkgs.fetchurl {
             url = "https://files.tableplus.com/linux/x64/${build-number}/TablePlus-x64.AppImage";
             # This will change when build numbers change. Run `curl -s [url] | sha256sum`
-            hash = "sha256:30aa17c5364e59e9e17f2614613f4553c84031fe0886d475c384400c99711aef";
+            hash = "sha256:fa11a17b28b3dfe88c79cbc25a962280ed64c1aaa88412f1057beed62f32770a";
           };
           contents = pkgs.appimageTools.extract { inherit pname version src; };
         in
