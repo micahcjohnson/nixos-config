@@ -83,7 +83,6 @@
           package = pkgs.adwaita-icon-theme;
           name = "Adwaita";
         };
-        gtk4.theme = null;
       };
 
       programs.fuzzel = {
