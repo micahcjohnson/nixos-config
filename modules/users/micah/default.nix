@@ -51,7 +51,7 @@
             just
 
             # adds some utilities used by MO2
-            libsForQt5.qt5.qttools
+            qt5.qttools
             p7zip
             zenity
 
