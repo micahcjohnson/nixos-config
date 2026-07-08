@@ -52,6 +52,7 @@
         variant = "";
       };
 
+      services.hardware.bolt.enable = true;
       services.printing.enable = true;
 
       # Enable sound with pipewire.
