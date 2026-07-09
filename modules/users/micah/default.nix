@@ -96,6 +96,7 @@
         Inherits=${config.stylix.cursor.name}
       '';
       home.sessionVariables.XCURSOR_PATH = "$HOME/.icons:$HOME/.local/share/icons:/usr/share/icons:/usr/share/pixmaps";
+      home.pointerCursor.enable = true;
 
       programs.zen-browser.enable = true;
       programs.nix-index-database.comma.enable = true;
