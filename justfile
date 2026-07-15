@@ -5,7 +5,7 @@ _default:
 update:
   nix flake update && jj commit -m 'flake: update inputs'
 
-# shared logic for switch/boot: only tags if a new generation was actually created
+# creates a generation tag if a new generation was actually created
 _generation-tracked-nh mode *ARGS:
   #!/usr/bin/env bash
   set -euo pipefail
@@ -20,10 +20,10 @@ _generation-tracked-nh mode *ARGS:
 switch *ARGS:
   just _generation-tracked-nh switch {{ARGS}}
 
-# build the new configuration and make it the boot default
+# build the new config and apply it for next boot
 boot *ARGS:
   just _generation-tracked-nh boot {{ARGS}}
 
-# build the new configuration only (no activation, no tagging)
+# build the current config
 build *ARGS:
   nh os build {{ARGS}}

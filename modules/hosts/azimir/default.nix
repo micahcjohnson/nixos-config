@@ -8,6 +8,9 @@
       inputs.stylix.nixosModules.stylix
       inputs.home-manager.nixosModules.home-manager
       {
+        system.configurationRevision = self.rev or self.dirtyRev or "dirty";
+      }
+      {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.backupFileExtension = "bak";
