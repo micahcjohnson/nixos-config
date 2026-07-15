@@ -8,6 +8,7 @@
         svc-steam
         svc-vaultwarden
         twk-nuphy-keyboard
+        twk-thunderbolt-reboot-fix
         cmp-clt-sys
         cmp-niri-sys
         cmp-stylix-sys
