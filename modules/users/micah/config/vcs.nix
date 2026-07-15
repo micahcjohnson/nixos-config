@@ -18,7 +18,7 @@
 
       programs.jujutsu = {
         enable = true;
-        package = pkgs.jujutsu;
+        package = pkgs.unstable.jujutsu;
         settings = {
           inherit user;
           ui.default-command = "log";

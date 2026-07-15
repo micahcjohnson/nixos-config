@@ -73,8 +73,6 @@
         swaynotificationcenter
         ironbar
         gpu-screen-recorder
-        noctalia-qs
-        noctalia-shell
       ];
 
       gtk = {
@@ -89,7 +87,7 @@
         enable = true;
         settings = {
           main = {
-            terminal = "${pkgs.ghostty}/bin/ghostty -e";
+            terminal = "${pkgs.unstable.ghostty}/bin/ghostty -e";
             launch-prefix = "${pkgs.app2unit}/bin/app2unit";
 
             horizontal-pad = 10;

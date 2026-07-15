@@ -91,6 +91,7 @@
     {
       programs.helix = {
         enable = true;
+        package = pkgs.unstable.helix;
         inherit settings languages;
       };
       programs.bash.bashrcExtra = ''

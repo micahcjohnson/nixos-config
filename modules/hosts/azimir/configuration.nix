@@ -124,6 +124,14 @@
       };
 
       nixpkgs.config.allowUnfree = true;
+      nixpkgs.overlays = [
+        (final: prev: {
+          unstable = import inputs.nixpkgs-unstable {
+            system = final.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+        })
+      ];
 
       environment.systemPackages = with pkgs; [
         git

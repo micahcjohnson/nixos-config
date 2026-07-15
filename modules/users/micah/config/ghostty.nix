@@ -5,7 +5,7 @@
     {
       programs.ghostty = {
         enable = true;
-        package = pkgs.ghostty;
+        package = pkgs.unstable.ghostty;
         enableBashIntegration = true;
 
         settings = {

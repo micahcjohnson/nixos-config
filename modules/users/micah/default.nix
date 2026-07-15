@@ -33,8 +33,8 @@
             obsidian
             blender
             blockbench
-            zed-editor
-            godot
+            unstable.zed-editor
+            unstable.godot
 
             # build failing 4/13 :(
             # cemu
